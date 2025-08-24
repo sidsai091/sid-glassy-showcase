@@ -38,43 +38,41 @@ const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Large Image (50%) */}
-          <motion.div
-            className="relative overflow-hidden rounded-3xl aspect-square"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.img
-              src={images[currentImageIndex]}
-              alt="Featured Product"
-              className="w-full h-full object-cover"
-              key={currentImageIndex}
-              initial={{ opacity: 0, scale: 1.1 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-pure-dark/30 to-transparent" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Left Side - Two stacked images */}
+          <div className="lg:col-span-2 grid grid-cols-1 gap-8">
             <motion.div
-              className="absolute bottom-6 left-6 text-pure-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              className="relative overflow-hidden rounded-3xl aspect-[4/3]"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
             >
-              <h3 className="text-2xl font-bold mb-2">Featured Collection</h3>
-              <p className="text-lg opacity-90">Premium Quality Design</p>
+              <img
+                src={images[currentImageIndex]}
+                alt="Featured Product"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-pure-dark/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="glass rounded-full p-4">
+                  <svg className="w-8 h-8 text-pure-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
 
-          {/* Small Images Grid (25% each) */}
-          <div className="grid grid-cols-1 gap-8">
             <motion.div
-              className="relative overflow-hidden rounded-3xl aspect-square"
-              initial={{ opacity: 0, x: 50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
+              className="relative overflow-hidden rounded-3xl aspect-[4/3]"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
             >
               <img
                 src={images[(currentImageIndex + 1) % images.length]}
@@ -94,33 +92,47 @@ const Gallery = () => {
                 </div>
               </motion.div>
             </motion.div>
-
-            <motion.div
-              className="relative overflow-hidden rounded-3xl aspect-square"
-              initial={{ opacity: 0, x: 50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <img
-                src={images[(currentImageIndex + 2) % images.length]}
-                alt="Product 3"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-pure-dark/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-              <motion.div
-                className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="glass rounded-full p-4">
-                  <svg className="w-8 h-8 text-pure-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-              </motion.div>
-            </motion.div>
           </div>
+
+          {/* Right Side - Single tall image */}
+          <motion.div
+            className="relative overflow-hidden rounded-3xl aspect-[3/4] lg:aspect-[2/3]"
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.img
+              src={images[(currentImageIndex + 2) % images.length]}
+              alt="Product 3"
+              className="w-full h-full object-cover"
+              key={currentImageIndex}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-pure-dark/30 to-transparent" />
+            <motion.div
+              className="absolute bottom-6 left-6 text-pure-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <h3 className="text-2xl font-bold mb-2">Featured Collection</h3>
+              <p className="text-lg opacity-90">Premium Quality Design</p>
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              whileHover={{ scale: 1.1 }}
+            >
+              <div className="glass rounded-full p-4">
+                <svg className="w-8 h-8 text-pure-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* Image Indicators */}
