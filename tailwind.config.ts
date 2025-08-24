@@ -32,10 +32,6 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
-				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -44,24 +40,37 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Glassmorphism Colors
+				'pure-white': 'hsl(var(--pure-white))',
+				'pure-dark': 'hsl(var(--pure-dark))',
+				'medium-grey': 'hsl(var(--medium-grey))',
+				'light-grey': 'hsl(var(--light-grey))',
+				'dark-grey': 'hsl(var(--dark-grey))',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-dark': 'var(--gradient-dark)',
+				'gradient-glass': 'var(--gradient-glass)',
+			},
+			boxShadow: {
+				'glass': 'var(--shadow-glass)',
+				'glow': 'var(--shadow-glow)',
+				'card-modern': 'var(--shadow-card)',
+			},
+			backdropBlur: {
+				'glass': '20px',
+			},
+			animation: {
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'slide-up': 'slideUp 0.8s ease-out forwards',
+				'fade-in': 'fadeIn 0.6s ease-out forwards',
+				'scale-in': 'scaleIn 0.6s ease-out forwards',
+				'marquee': 'marquee 20s linear infinite',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
