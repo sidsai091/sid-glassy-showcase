@@ -1,24 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sid-glassy-showcase</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sid - Where Design Meets Creativity</title>
+    <meta name="description" content="Welcome to Sid, where design meets creativity and exclusivity" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">S</div>
+                <span class="company-name">Sid</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="sid-glassy-showcase" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to <span class="gradient-text">Sid</span>, where design meets creativity and exclusivity.
+            </h1>
+            <p class="hero-subtitle">Discover premium products crafted with passion and precision</p>
+            <button class="cta-button">Explore Collections</button>
+        </div>
+        <div class="hero-bg-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <p>Discover our exclusive collection of premium products</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-main">
+                    <div class="gallery-card large-card">
+                        <img src="src/assets/product1.jpg" alt="Featured Product" class="gallery-image">
+                        <div class="card-overlay">
+                            <div class="card-content">
+                                <h3>Featured Collection</h3>
+                                <p>Premium Quality Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-grid-small">
+                    <div class="gallery-card">
+                        <img src="src/assets/product2.jpg" alt="Product 2" class="gallery-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="src/assets/product3.jpg" alt="Product 3" class="gallery-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="src/assets/product4.jpg" alt="Product 4" class="gallery-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-card">
+                        <img src="src/assets/product5.jpg" alt="Product 5" class="gallery-image">
+                        <div class="card-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="view-all-btn">View All Collections</button>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Product Carousel -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Explore our handpicked premium collection</p>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="product-carousel" id="productCarousel">
+                    <div class="product-card">
+                        <img src="src/assets/product1.jpg" alt="Premium Watch">
+                        <div class="product-info">
+                            <h3>Premium Watch</h3>
+                            <p class="price">$299</p>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="src/assets/product2.jpg" alt="Designer Bag">
+                        <div class="product-info">
+                            <h3>Designer Bag</h3>
+                            <p class="price">$199</p>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="src/assets/product3.jpg" alt="Luxury Headphones">
+                        <div class="product-info">
+                            <h3>Luxury Headphones</h3>
+                            <p class="price">$399</p>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="src/assets/product4.jpg" alt="Smart Device">
+                        <div class="product-info">
+                            <h3>Smart Device</h3>
+                            <p class="price">$599</p>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="src/assets/product5.jpg" alt="Premium Accessory">
+                        <div class="product-info">
+                            <h3>Premium Accessory</h3>
+                            <p class="price">$149</p>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback & Statistics -->
+    <section class="feedback-stats">
+        <div class="container">
+            <div class="feedback-section">
+                <h2>What Our Customers Say</h2>
+                <div class="feedback-grid">
+                    <div class="feedback-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and exceptional service. Highly recommended!"</p>
+                        <div class="customer-info">
+                            <strong>Sarah Johnson</strong>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Beautiful products with attention to detail. Love shopping here!"</p>
+                        <div class="customer-info">
+                            <strong>Michael Chen</strong>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Fast delivery and premium packaging. Excellent experience!"</p>
+                        <div class="customer-info">
+                            <strong>Emma Davis</strong>
+                        </div>
+                    </div>
+                    <div class="feedback-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Outstanding customer support and product quality. Will buy again!"</p>
+                        <div class="customer-info">
+                            <strong>David Wilson</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="10000">0</div>
+                        <div class="stat-label">Total Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="50000">0</div>
+                        <div class="stat-label">Total Sales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Total Collaborators</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborators -->
+    <section class="collaborators">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partners-marquee">
+                <div class="partners-track">
+                    <div class="partner-logo">BRAND A</div>
+                    <div class="partner-logo">BRAND B</div>
+                    <div class="partner-logo">BRAND C</div>
+                    <div class="partner-logo">BRAND D</div>
+                    <div class="partner-logo">BRAND E</div>
+                    <div class="partner-logo">BRAND F</div>
+                    <div class="partner-logo">BRAND A</div>
+                    <div class="partner-logo">BRAND B</div>
+                    <div class="partner-logo">BRAND C</div>
+                    <div class="partner-logo">BRAND D</div>
+                    <div class="partner-logo">BRAND E</div>
+                    <div class="partner-logo">BRAND F</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our products and services</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day return policy for all unused items in their original packaging. Please contact our customer service team to initiate a return.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard shipping takes 3-5 business days, while express shipping takes 1-2 business days. International shipping may take 7-14 business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer international shipping?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by destination.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your products covered by warranty?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our products come with a 1-year manufacturer warranty covering defects in materials and workmanship.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I track my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once your order ships, you'll receive a tracking number via email. You can use this to track your package on our website or the carrier's website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">S</div>
+                        <span class="company-name">Sid</span>
+                    </div>
+                    <p>Where design meets creativity and exclusivity. Crafting premium experiences since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Design Street, Creative City, CC 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@sid.com</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sid. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
