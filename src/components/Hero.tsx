@@ -9,25 +9,6 @@ const Hero = () => {
 
   return (
     <section ref={ref} className="min-h-screen relative overflow-hidden bg-gradient-primary flex items-center justify-center">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-pure-dark blur-sm transform rotate-45"
-          animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-pure-dark blur-md transform rotate-45"
-          animate={{ y: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 bg-pure-dark blur-lg transform rotate-45"
-          animate={{ x: [0, 30, 0], opacity: [0.4, 0.7, 0.4] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-        />
-      </div>
-
       <div className="container mx-auto px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -82,27 +63,6 @@ const Hero = () => {
               Learn More
             </motion.button>
           </motion.div>
-        </motion.div>
-
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-1/4 right-10 hidden lg:block"
-          animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        >
-          <div className="glass rounded-2xl w-20 h-20 flex items-center justify-center">
-            <div className="w-8 h-8 bg-gradient-dark rounded-full" />
-          </div>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-1/4 left-10 hidden lg:block"
-          animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-        >
-          <div className="glass rounded-2xl w-16 h-16 flex items-center justify-center">
-            <div className="w-6 h-6 bg-gradient-dark rounded-lg" />
-          </div>
         </motion.div>
       </div>
 
