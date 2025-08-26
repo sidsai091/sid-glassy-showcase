@@ -146,9 +146,9 @@ const Gallery = () => {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-full h-3 rounded-lg transition-all duration-300 ${
                 index === currentImageIndex
-                  ? 'bg-pure-dark scale-125'
+                  ? 'bg-pure-dark scale-105'
                   : 'bg-medium-grey hover:bg-dark-grey'
               }`}
             />
