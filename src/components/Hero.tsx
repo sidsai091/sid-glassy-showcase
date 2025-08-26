@@ -12,20 +12,17 @@ const Hero = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-pure-dark blur-sm"
-          style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
+          className="absolute top-20 left-10 w-20 h-20 bg-pure-dark blur-sm transform rotate-45"
           animate={{ y: [0, -20, 0], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-32 h-32 bg-pure-dark blur-md"
-          style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-pure-dark blur-md transform rotate-45"
           animate={{ y: [0, 20, 0], opacity: [0.2, 0.5, 0.2] }}
           transition={{ duration: 6, repeat: Infinity, delay: 1 }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/4 w-16 h-16 bg-pure-dark blur-lg"
-          style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
+          className="absolute top-1/2 left-1/4 w-16 h-16 bg-pure-dark blur-lg transform rotate-45"
           animate={{ x: [0, 30, 0], opacity: [0.4, 0.7, 0.4] }}
           transition={{ duration: 5, repeat: Infinity, delay: 2 }}
         />
