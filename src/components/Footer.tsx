@@ -93,9 +93,9 @@ const Footer = () => {
                 <div>
                   <p className="text-pure-white font-semibold">Location</p>
                   <p className="text-medium-grey">
-                    123 Design Street<br />
-                    Creative District, CD 12345<br />
-                    United States
+                    Seksyen 13<br />
+                    Shah Alam, 40100<br />
+                    Selangor, Malaysia
                   </p>
                 </div>
               </motion.div>
@@ -110,7 +110,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-medium-grey flex-shrink-0" />
                 <div>
                   <p className="text-pure-white font-semibold">Phone</p>
-                  <p className="text-medium-grey">+1 (555) 123-4567</p>
+                  <p className="text-medium-grey">+60 13202-4413</p>
                 </div>
               </motion.div>
             </div>

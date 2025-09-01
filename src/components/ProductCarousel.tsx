@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ShoppingCart, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
-import product1 from '@/assets/product1.jpg';
-import product2 from '@/assets/product2.jpg';
-import product3 from '@/assets/product3.jpg';
-import product4 from '@/assets/product4.jpg';
-import product5 from '@/assets/product5.jpg';
+import product1 from '@/assets/ProductUiam.png';
+import product2 from '@/assets/ProductUitm.png';
+import product3 from '@/assets/blank.png';
+import product4 from '@/assets/blank.png';
+import product5 from '@/assets/blank.png';
 
 const ProductCarousel = () => {
   const [ref, inView] = useInView({
@@ -18,11 +18,11 @@ const ProductCarousel = () => {
   const itemsPerView = 3;
 
   const products = [
-    { id: 1, name: "Premium Device", price: "$299", image: product1 },
-    { id: 2, name: "Luxury Watch", price: "$599", image: product2 },
-    { id: 3, name: "Designer Accessory", price: "$199", image: product3 },
-    { id: 4, name: "Tech Gadget", price: "$399", image: product4 },
-    { id: 5, name: "Modern Tool", price: "$149", image: product5 },
+    { id: 1, name: "UIAM", price: "RM69", image: product1 },
+    { id: 2, name: "UITM", price: "RM69", image: product2 },
+    { id: 3, name: "To be Added", price: "$???", image: product3 },
+    { id: 4, name: "To be Added", price: "$???", image: product4 },
+    { id: 5, name: "To be Added", price: "$???", image: product5 },
   ];
 
   const maxIndex = Math.max(0, products.length - itemsPerView);

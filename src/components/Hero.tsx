@@ -22,14 +22,14 @@ const Hero = () => {
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <span className="gradient-text">Welcome to</span>
+            <span className="gradient-text"> Sid.clo</span>
             <br />
             <motion.span
               className="text-pure-dark"
               animate={{ rotate: [0, 1, -1, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             >
-              sidclo
+             
             </motion.span>
           </motion.h1>
 

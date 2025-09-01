@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import product1 from '@/assets/product1.jpg';
-import product2 from '@/assets/product2.jpg';
-import product3 from '@/assets/product3.jpg';
+import product1 from '@/assets/Untitled-1.png';
+import product2 from '@/assets/Untitled-2.png';
+/*import product3 from '@/assets/product3.jpg';*/
 
 const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -13,7 +13,7 @@ const Gallery = () => {
     triggerOnce: true,
   });
 
-  const images = [product1, product2, product3];
+  const images = [product1, product2, /*product3*/];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
