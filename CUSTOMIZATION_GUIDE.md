@@ -114,7 +114,13 @@ import yourImage1 from '@/assets/your-image1.jpg';
 **Image requirements:**
 - **Location:** `src/assets/`
 - **Format:** .jpg, .png, .webp
-- **Recommended size:** 1200x800px minimum
+- **Recommended dimensions:**
+  - **Gallery images:** 1920x1080px (16:9 aspect ratio) for best quality
+  - **Product images:** 800x800px (1:1 square aspect ratio)
+  - **Hero background:** 1920x1080px minimum
+  - **Logo/icons:** 512x512px (SVG preferred for scalability)
+- **File size:** Keep under 2MB per image for optimal loading
+- **Quality:** Use 80-90% JPEG quality or PNG for transparency needs
 
 ---
 
@@ -296,12 +302,92 @@ To modify responsive behavior, adjust Tailwind classes:
 
 ---
 
+---
+
+## 🚀 Deployment Guide
+
+### **Step 1: Connect to GitHub**
+1. **In Lovable:** Click the GitHub button in the top right
+2. **Authorize:** Connect your GitHub account to Lovable
+3. **Create Repository:** Let Lovable create a new repository with your code
+4. **Automatic Sync:** All future changes in Lovable will automatically push to GitHub
+
+### **Step 2: Deploy Your App**
+
+#### **Option A: Using Lovable (Easiest)**
+1. **Click Publish** in the top right of Lovable editor
+2. **Get staging URL:** Your app will be live at `yourproject.lovable.app`
+3. **Connect custom domain:** Go to Project Settings → Domains
+
+#### **Option B: Deploy to Vercel/Netlify**
+1. **Fork/Clone** your GitHub repository
+2. **Connect to hosting:** Link your GitHub repo to Vercel/Netlify
+3. **Auto-deploy:** Pushes to main branch will automatically deploy
+
+#### **Option C: Self-Host**
+```bash
+# Clone your repository
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Serve the dist folder with any web server
+```
+
+### **Step 3: Custom Domain Setup**
+
+#### **For Lovable Hosting:**
+1. **Go to:** Project Settings → Domains in Lovable
+2. **Add domain:** Enter your domain (e.g., `yourdomain.com`)
+3. **DNS Setup:** Add these records at your domain registrar:
+   - **Type:** A Record
+   - **Name:** @ (for root domain)
+   - **Value:** 185.158.133.1
+   - **Name:** www
+   - **Value:** 185.158.133.1
+4. **Wait:** DNS propagation takes 24-48 hours
+5. **SSL:** Automatically provisioned by Lovable
+
+#### **For Other Hosting (Vercel/Netlify):**
+1. **In hosting dashboard:** Go to domain settings
+2. **Add domain:** Enter your custom domain
+3. **Follow provider instructions** for DNS setup
+4. **SSL:** Automatically handled by hosting provider
+
+### **Step 4: DNS Configuration Tips**
+- **Use DNSChecker.org** to verify your DNS settings
+- **Remove old records** that might conflict
+- **CAA records:** Ensure they allow Let's Encrypt for SSL
+- **Subdomain setup:** First add root domain, then add subdomain
+- **Troubleshooting:** Wait up to 48 hours for DNS propagation
+
+### **Step 5: Environment Variables (If Needed)**
+If your app uses APIs or secrets:
+```bash
+# Create .env file (for self-hosting)
+VITE_API_KEY=your_api_key
+VITE_API_URL=your_api_url
+```
+
+For Lovable/Vercel/Netlify: Add environment variables in their respective dashboards.
+
+---
+
 ## 🆘 Need Help?
 
 1. **Visual Edits:** Use the Visual Edits feature for quick text/color changes
 2. **Chat:** Ask specific questions about any section
 3. **Documentation:** Check component comments for additional guidance
+4. **Deployment Issues:** 
+   - Check DNS settings with DNSChecker.org
+   - Verify GitHub connection in Lovable
+   - Contact support with domain name and DNS screenshots
 
 ---
 
-*Remember: Always test changes on different screen sizes!*
+*Remember: Always test changes on different screen sizes and deploy regularly!*

@@ -29,7 +29,7 @@ const Hero = () => {
               animate={{ rotate: [0, 1, -1, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
             >
-              Sid
+              sidclo
             </motion.span>
           </motion.h1>
 

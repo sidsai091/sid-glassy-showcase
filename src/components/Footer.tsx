@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <span className="text-pure-dark font-bold text-xl">S</span>
               </div>
-              <span className="text-2xl font-bold">Sid</span>
+              <span className="text-2xl font-bold">sidclo</span>
             </div>
             <p className="text-medium-grey leading-relaxed mb-6">
               Where design meets creativity and exclusivity. We create premium products that combine innovation with aesthetic excellence.
@@ -153,7 +153,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-medium-grey text-center md:text-left mb-4 md:mb-0">
-            © 2024 Sid. All rights reserved. Designed with passion and precision.
+            © 2024 sidclo. All rights reserved. Designed with passion and precision.
           </p>
           <div className="flex space-x-6">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link, index) => (

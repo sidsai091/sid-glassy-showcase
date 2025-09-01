@@ -30,7 +30,7 @@ const Navbar = () => {
           <div className="w-8 h-8 rounded-lg bg-gradient-dark flex items-center justify-center">
             <span className="text-pure-white font-bold text-lg">S</span>
           </div>
-          <span className="text-xl font-bold text-pure-dark">Sid</span>
+          <span className="text-xl font-bold text-pure-dark">sidclo</span>
         </motion.div>
 
         <div className="hidden md:flex items-center space-x-8">
